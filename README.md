@@ -127,8 +127,8 @@ La fonction \_verifyMultiSignature est responsable de la vérification des signa
 
    ```
    uint256 count = _multiSignature.length;
-       require(count <= _ownersCount, "Invalid number of signatures");
-       require(count >= threshold, "Not enough signatures");
+   require(count <= _ownersCount, "Invalid number of signatures");
+   require(count >= threshold, "Not enough signatures");
    ```
 3. Création du digest et vérification de l'adresse du contract (address(this)) : L'adresse utilisée pour créer la signature doit correspondre à l'adresse du contrat afin d'éviter l'utilisation de signatures créées pour d'autres contrats.
 
